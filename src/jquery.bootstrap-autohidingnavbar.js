@@ -74,7 +74,7 @@
     }
     else if (scrollDelta > 0) {
       if (!_visible) {
-        if (autoHidingNavbar.settings.showOnBottom && scrollTop + _windowHeight === $document.height()) {
+        if (autoHidingNavbar.settings.showOnBottom && scrollTop + _windowHeight > $(document).height() - 100) {
           show(autoHidingNavbar);
         }
         return;
